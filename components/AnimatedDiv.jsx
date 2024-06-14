@@ -44,7 +44,7 @@ export const AnimatedDiv = () => {
         trigger: el,
         start: 'top 60%',
         end: 'bottom 40%',
-        markers: true,
+        // markers: true,
         onEnter: () => setActiveIndex(index),
         onLeaveBack: () => setActiveIndex(-1),
         onLeave: () => setActiveIndex(-1),

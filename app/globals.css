@@ -35,6 +35,9 @@ body {
   @apply bg-gradient-to-r from-red-400 to-purple-500 bg-clip-text text-transparent;
   background-image: linear-gradient(106deg, #FF5C48 15.06%, #6E4AF1 42.48%);
 }
+.gradient-text {
+  background: linear-gradient(106deg, rgba(164, 124, 243, 1) 15.06%, rgba(104, 63, 234, 1) 42.48%);
+}
 
 /* ANIMATED  TEXTT start ////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @layer base {

@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, rgba(22, 18, 62, 1), rgba(0, 0, 0, 1))',
-        'custom-gradiant2':'linear-gradient(183deg, #876DFF 23.72%, #412F99 125.38%);'
+        'custom-gradiant2':'linear-gradient(183deg, #876DFF 23.72%, #412F99 125.38%);',
+        'custom-gradient3':'radial-gradient(75.97% 95.37% at 90% 10.37%, #16123E 0%, #000 100%), #000;'
 
       },
     },
