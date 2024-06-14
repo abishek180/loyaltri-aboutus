@@ -31,3 +31,58 @@ body {
     text-wrap: balance;
   }
 }
+.text-gradient {
+  @apply bg-gradient-to-r from-red-400 to-purple-500 bg-clip-text text-transparent;
+  background-image: linear-gradient(106deg, #FF5C48 15.06%, #6E4AF1 42.48%);
+}
+
+/* ANIMATED  TEXTT start ////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@layer base {
+  @keyframes fill-text {
+    to {
+      --progress: 100%;
+    }
+  }
+  /* The @property tells the browser what type this variable is,
+    a percentage in our case. If we would not add that here, the
+    browser would not be able to animate it from 0% to 100%.
+  */
+}
+@keyframes fill-text {
+  to {
+    --progress: 100%;
+  }
+}
+@property --progress {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@layer components {
+.reveal-text {
+  --faded-color: #111;
+  --higlighted-color: #FFF;
+  /* Compared to the video, I updated this article to reflect
+     a solution that's so much easier. Creating a single gradient
+     with two colors, and then animating the starting/end point of
+     the two colors with a CSS variable --progress. CSS @property
+     makes this so much easier for us now.
+  */
+  --progress: 0%;
+  background-image: linear-gradient(
+    to right,
+    var(--higlighted-color),
+    var(--higlighted-color) var(--progress),
+    var(--faded-color) var(--progress),
+    var(--faded-color)
+  );
+  background-clip: text;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: inline;
+  animation: fill-text linear both;
+  animation-timeline: --reveal-wrapper;
+  animation-range: entry 200% cover 80%;
+}
+}
+/* ANIMATED  TEXTT End ////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
