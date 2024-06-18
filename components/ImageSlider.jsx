@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import { GetChars } from "./GetChars";
 import DrawSvg from "./DrawSvg";
+import year2024 from "@/public/images/2024.png"
 
 // images
 import oldloyaltri from "@/public/images/loyaltriold.png";
@@ -56,7 +57,7 @@ export const ImageSlider = () => {
             <p className="uppercase gradient-text text-6xl md:text-[150px] lg:text-[180px] font-bold text-center leading-[122%]">
               loyaltri
             </p>
-            <div className="flex items-center gap-2 py-2 px-8 bg-[#141414] border border-[#828282] shadow-xl rounded-3xl md:rounded-[48px]">
+            {/* <div className="flex items-center gap-2 py-2 px-8 bg-[#141414] border border-[#828282] shadow-xl rounded-3xl md:rounded-[48px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
@@ -83,6 +84,9 @@ export const ImageSlider = () => {
                 </defs>
               </svg>
               <p className="text-[32px] font-bold">2010</p>
+            </div> */}
+            <div className="w-[110px]">
+              <Image src={year2024} className="w-full h-full object-cover object-center"/>
             </div>
           </div>
           <div
