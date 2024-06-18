@@ -29,7 +29,7 @@ export function ImageScroll() {
         />
       </ContainerScroll>
       <div className="flex flex-col justify-center items-center text-center">
-      <p className="w-full lg:w-[817px] text-white text-4xl font-semibold">As we engaged with school administrators and HR professionals, they all echoed the same sentiment...</p>
+      <p className="w-full lg:w-[817px] text-white text-xl md:text-4xl font-semibold">As we engaged with school administrators and HR professionals, they all echoed the same sentiment...</p>
       <DrawSvg/>
       </div>
     </div>

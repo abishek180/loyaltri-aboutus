@@ -186,7 +186,7 @@ export const Hero = ({
             </svg>
           </div>
           <div className="w-full lg:w-[910px] flex flex-col justify-center items-center">
-            <p className="text-4xl lg:text-[90px] text-white font-bold leading-[120%]">Building the modern <span className="text-gradient">HRMS</span> Saas Platform</p>
+            <p className="text-4xl lg:text-[90px] text-white font-bold leading-[120%] text-center">Building the modern <span className="text-gradient">HRMS</span> Saas Platform</p>
             <p className="text-[#A5A9AE] text-xl font-normal w-full lg:w-[807px] text-center">{description}</p>
           </div>
         </div>

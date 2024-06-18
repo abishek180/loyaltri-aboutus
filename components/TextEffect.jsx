@@ -39,7 +39,7 @@ const TextEffect = () => {
       <div className="sticky-wrapper h-[250vh]">
         <section className="sticky-section sticky top-0 h-screen flex justify-center items-center bg-black">
           <div className="flex flex-col justify-center items-center">
-            {["Then", "something", "crazy", "happened"].map((text, index) => (
+            {["It", "Transformed", "Their", "Perspective"].map((text, index) => (
               <p
                 key={index}
                 className="animated-text text-white text-[50px] lg:text-[86px] font-semibold text-center leading-none"

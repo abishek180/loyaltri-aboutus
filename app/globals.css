@@ -36,7 +36,9 @@ body {
   background-image: linear-gradient(106deg, #FF5C48 15.06%, #6E4AF1 42.48%);
 }
 .gradient-text {
-  background: linear-gradient(106deg, rgba(164, 124, 243, 1) 15.06%, rgba(104, 63, 234, 1) 42.48%);
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(106deg, rgba(164, 124, 243, 1) 15.06%, rgba(104, 63, 234, 1) 42.48%);
+  text-shadow: 0px 0px 180px #9917FF, 0px 0px 1px rgba(255, 255, 255, 0.10);
 }
 
 /* ANIMATED  TEXTT start ////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

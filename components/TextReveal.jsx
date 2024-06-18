@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import loyaltriold from "@/public/images/loyaltriold.png"
 
-const AnimatedText = () => {
+const TextReveal = () => {
   return (
     <section className='max-w-screen-xl mx-auto px-5 lg:px-10 2xl:px-0'>
         <div className="h-[400vh] [view-timeline-name:--reveal-wrapper]">
@@ -24,4 +24,4 @@ const AnimatedText = () => {
   )
 }
 
-export default AnimatedText
+export default TextReveal
