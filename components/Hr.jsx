@@ -22,7 +22,7 @@ export const Hr = () => {
       <div className="flex justify-center items-center relative">
         <div className="flex flex-col justify-center items-center gap-20">
           <DrawSvg />
-          <p className="text-white text-2xl md:text-[38px] text-center font-semibold leading-[122%] flex flex-col md:flex-row items-center gap-3">
+          <p className="text-white text-2xl md:text-[38px] text-center font-semibold leading-[122%] flex flex-col lg:flex-row items-center gap-3">
             The constant question{" "}
             <span className="overflow-hidden w-[37px]">
               <Image
@@ -37,7 +37,7 @@ export const Hr = () => {
             initial={{ scale: 1 }}
             animate={{ scale: isPopInView ? 1.2 : 1 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-[750px]"
+            className="w-[280px] md:w-[500px] lg:w-[750px]"
           >
             <Image src={pop} className="w-full h-full object-cover object-center" />
           </motion.div>

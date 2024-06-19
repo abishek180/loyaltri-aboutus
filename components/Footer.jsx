@@ -19,9 +19,9 @@ const Footer = () => {
               <Link href="/contact">Book your Demo</Link>
             </button>
             <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-                <p className="text-[#667085] text-xs md:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/>A no-commitment <span className="text-black font-medium">product walkthrough</span></p>
-                <p className="text-[#667085] text-xs md:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/><span className="text-black font-medium">Free Trial,</span> Cancel any time</p>
-                <p className="text-[#667085] text-xs md:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/>Your questions,<span className="text-black font-medium">answered</span></p>
+                <p className="text-[#667085] text-xs lg:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/>A no-commitment <span className="text-black font-medium">product walkthrough</span></p>
+                <p className="text-[#667085] text-xs lg:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/><span className="text-black font-medium">Free Trial,</span> Cancel any time</p>
+                <p className="text-[#667085] text-xs lg:text-sm font-normal flex items-center gap-2"><IoIosCheckmarkCircle className="text-black"/>Your questions,<span className="text-black font-medium">answered</span></p>
             </div>
         </div>
       </div>
