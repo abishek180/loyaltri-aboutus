@@ -5,10 +5,10 @@ import year2010 from "@/public/images/2010.png";
 // components
 import TextReveal from "@/components/TextReveal";
 import { Hero } from "@/components/Hero";
-import { Bentogrid } from "@/components/Bentogrid";
+import  Bento  from "@/components/Bento";
 import { ImageScroll } from "@/components/ImageScroll";
 import TextEffect from "@/components/TextEffect";
-import { AnimatedDiv } from "@/components/AnimatedDiv";
+import { FramerDiv } from "@/components/FramerDiv";
 import DrawSvg from "@/components/DrawSvg";
 import { ImageSlider } from "@/components/ImageSlider";
 import { Hr } from "@/components/Hr";
@@ -32,9 +32,9 @@ const page = () => {
       <TextReveal />
       <ImageScroll />
       <TextEffect />
-      <Bentogrid />
+      <Bento />
       <Hr />
-      <AnimatedDiv />
+      <FramerDiv />
       <ImageSlider />
       <Map />
       <Footer />
