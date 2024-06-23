@@ -59,7 +59,6 @@ export const FramerDiv = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
-  const controls = useAnimation();
   const observers = useRef([]);
 
   useEffect(() => {
@@ -90,8 +89,8 @@ export const FramerDiv = () => {
   }, []);
 
   return (
-    <div>
-      <section className="max-w-screen-xl mx-auto px-5 lg:px-10 2xl:px-0 bg-black py-20 text-white flex flex-col gap-44 justify-between items-center">
+    <div className="max-w-screen-xl mx-auto px-5 lg:px-10 2xl:px-0 bg-black py-20 text-white">
+      <div className="flex flex-col gap-44 justify-between items-center">
         {details.map((detail, index) => (
           <AnimatedDetail
             key={index}
@@ -100,26 +99,16 @@ export const FramerDiv = () => {
             isActive={index === activeIndex}
           />
         ))}
-      </section>
+      </div>
     </div>
   );
 };
 
 const AnimatedDetail = ({ detail, index, isActive }) => {
-  const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.7,
     triggerOnce: false,
   });
-
-  useEffect(() => {
-    controls.start({
-      scale: isActive ? 1.1 : 1,
-      filter: isActive ? "none" : "grayscale(100%)",
-      opacity: isActive ? 1 : 0.5,
-      transition: { duration: 0.3 },
-    });
-  }, [isActive, controls]);
 
   return (
     <motion.div
@@ -127,7 +116,12 @@ const AnimatedDetail = ({ detail, index, isActive }) => {
       id={`detail-${index}`}
       className="observer-element flex flex-col justify-center items-center gap-10"
       initial={{ scale: 1, filter: "grayscale(100%)", opacity: 0.5 }}
-      animate={controls}
+      animate={{
+        scale: isActive ? 1.1 : 1,
+        filter: isActive ? "none" : "grayscale(100%)",
+        opacity: isActive ? 1 : 0.5,
+        transition: { duration: 0.3 },
+      }}
     >
       <motion.div
         className="rounded-[30px] py-5 px-6 flex justify-center items-center"
