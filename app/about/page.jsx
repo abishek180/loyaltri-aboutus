@@ -14,6 +14,7 @@ import { ImageSlider } from "@/components/ImageSlider";
 import { Hr } from "@/components/Hr";
 import { Map } from "@/components/Map";
 import Footer from "@/components/Footer";
+import { AnimatedDiv } from "@/components/AnimatedDiv";
 
 
 const page = () => {
@@ -34,6 +35,7 @@ const page = () => {
       <TextEffect />
       <Bento />
       <Hr />
+      {/* <AnimatedDiv/> */}
       <FramerDiv />
       <ImageSlider />
       <Map />

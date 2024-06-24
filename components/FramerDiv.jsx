@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import debounce from "lodash/debounce";
 
 export const FramerDiv = () => {
   const details = [
@@ -56,64 +57,59 @@ export const FramerDiv = () => {
         </svg>
       ),
     },
+    
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
   const observers = useRef([]);
 
+  const handleIntersect = debounce((entries) => {
+    entries.forEach((entry) => {
+      const index = parseInt(entry.target.getAttribute("data-index"));
+      const rect = entry.target.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        setActiveIndex(index);
+      }
+    });
+  }, 50);
+
   useEffect(() => {
-    details.forEach((_, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveIndex(index);
-          }
-        },
-        { threshold: 0.7 }
-      );
-      observers.current.push(observer);
+    observers.current = details.map((_, index) => {
+      const observer = new IntersectionObserver(handleIntersect, {
+        threshold: 1,
+      });
+      const element = document.getElementById(`detail-${index}`);
+      if (element) observer.observe(element);
+      return observer;
     });
 
     return () => {
       observers.current.forEach((observer) => observer.disconnect());
     };
-  }, []);
-
-  useEffect(() => {
-    observers.current.forEach((observer, index) => {
-      const element = document.getElementById(`detail-${index}`);
-      if (element) {
-        observer.observe(element);
-      }
-    });
-  }, []);
+  }, [details]);
 
   return (
     <div className="max-w-screen-xl mx-auto px-5 lg:px-10 2xl:px-0 bg-black py-20 text-white">
-      <div className="flex flex-col gap-44 justify-between items-center">
+      <ul className="flex flex-col gap-44 justify-between items-center list-none">
         {details.map((detail, index) => (
-          <AnimatedDetail
-            key={index}
-            detail={detail}
-            index={index}
-            isActive={index === activeIndex}
-          />
+          <li key={index} className="w-full">
+            <AnimatedDetail
+              detail={detail}
+              index={index}
+              isActive={index === activeIndex}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
 
 const AnimatedDetail = ({ detail, index, isActive }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.7,
-    triggerOnce: false,
-  });
-
   return (
     <motion.div
-      ref={ref}
       id={`detail-${index}`}
+      data-index={index}
       className="observer-element flex flex-col justify-center items-center gap-10"
       initial={{ scale: 1, filter: "grayscale(100%)", opacity: 0.5 }}
       animate={{
