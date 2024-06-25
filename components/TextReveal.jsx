@@ -19,7 +19,7 @@ const TextReveal = () => {
     </div> */}
       <div className=" h-[400vh] [view-timeline-name:--reveal-wrapper]">
         <div className="sticky top-0 flex min-h-screen items-center justify-center">
-          <div>
+          <div className="w-full lg:w-[980px] text-center">
             <p className="supports-[animation-timeline]:reveal-text text-xl text-black text-center md:text-[38px] lg:leading-[133%] font-semibold w-fit">
               The story starts with identifying a significant gap in the{" "}
               <span className="text-gradient">HRMS</span> software used by the
