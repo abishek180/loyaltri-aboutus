@@ -18,19 +18,19 @@ const TextEffect = () => {
           scrub: true,
           // markers: true,
           onEnter: () => {
-            gsap.to(text, { opacity: 1, scale: 1.2, duration: 0.3 });
+            gsap.to(text, { opacity: 1, scale: 1.2, duration: 0.5 });
             if (index > 0) {
-              gsap.to(textElements[index - 1], { scale: 1, duration: 0.3 });
+              gsap.to(textElements[index - 1], { scale: 1, duration: 0.5 });
             }
           },
           onLeaveBack: () => {
-            gsap.to(text, { opacity: 0.2, scale: 1, duration: 0.3 });
+            gsap.to(text, { opacity: 0.2, scale: 1, duration: 0.5 });
           },
         },
       });
 
       // Add a delay between animations
-      tl.to(text, { scale: 1.2, duration: 0.3, delay: index * 2.5 });
+      tl.to(text, { scale: 1.2, duration: 0.5, delay: index * 2.5 });
     });
   }, []);
 
