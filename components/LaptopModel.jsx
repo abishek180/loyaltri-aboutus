@@ -42,12 +42,12 @@ const LaptopModel = () => {
   }, []);
 
   return (
-    <div className="h-screen w-[1000px]">
-      <div style={{ height: '200vh' }}> {/* Make the page scrollable */}
+    <div className="w-full lg:w-[1000px]">
+      <div style={{ height: '100vh'}}> {/* Make the page scrollable */}
         <Canvas className="h-full w-full">
           <ambientLight intensity={0.5} />
           <directionalLight position={[0.5, 50, 5]} intensity={1.5} />
-          <CustomCamera position={{ position: [0, 0, 0.9], fov: 75 }} />
+          <CustomCamera position={{ position: [0, 0, 0.6], fov: 75 }} />
           <Laptop position={[0, 0, 0]} rotation={rotation} /> {/* Adjust rotation based on scroll */}
         </Canvas>
       </div>
