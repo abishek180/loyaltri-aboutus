@@ -46,7 +46,7 @@ export default function LaptopOpen() {
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     const scrollFraction = 1 - (scrollY / maxScroll); // Reverse the scroll effect
 
-    setScrollOpen(scrollFraction > 0.88);
+    setScrollOpen(scrollFraction > 0.92);
   };
 
   const handleClick = () => {
