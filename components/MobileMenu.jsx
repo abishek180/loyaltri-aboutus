@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransitionLink from "./TransitionLink";
 
-const Navbar = () => {
+const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,9 +11,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-black p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-2xl">Logo</div>
+        <div className="text-white text-2xl"></div>
         <div className="hidden md:flex space-x-6">
           <TransitionLink href="/" label="Home" />
           <TransitionLink href="/about" label="About" />
@@ -78,4 +78,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MobileMenu;
