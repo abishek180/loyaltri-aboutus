@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center pt-20">
+    <div className="flex flex-col justify-center items-center pt-10 md:pt-20">
       <section className="bg-[url('/images/loyaltri-bg.png')] h-screen w-full">
         <div className="max-w-screen-xl mx-auto px-5 lg:px-10 2xl:px-0 py-20">
           <div className="flex flex-col justify-center items-center gap-10">
