@@ -21,7 +21,7 @@ const TransitionLink = ({ href, label }) => {
   return (
     <button
       type="button"
-      className="text-[38px] md:text-xl font-semibold leading-tight text-white hover:text-neutral-700"
+      className="text-[38px] md:text-xl font-semibold md:font-normal leading-tight text-white hover:text-neutral-700"
       onClick={handleClick}
     >
       {label}
